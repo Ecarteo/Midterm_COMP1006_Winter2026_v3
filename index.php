@@ -1,34 +1,50 @@
+<?php
+// Connect to the database
+include "db.php";
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Review Submission</title>
+    <!-- Bootstrap CSS: https://getbootstrap.com/docs/5.3/getting-started/download/ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
 
-    <h1>Submit a Book Review</h1>
+    <!-- Bootstrap elements were directly taken and used the same way as in my phase one course project. -->
+    <div class="container mt-5">
+        <h1 class="mb-4">Submit a Book Review</h1>
 
-    <form action="process.php" method="POST">
+        <form action="process.php" method="POST">
 
-        <label for="title">Book Title:</label>
-        <input type="text" id="title" name="title">
+            <label for="title">Book Title:</label>
+            <input type="text" id="title" name="title" required>
 
-        <label for="author">Author:</label>
-        <input type="text" id="author" name="author">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
 
-        <label for="rating">Rating (1 to 5):</label>
-        <input type="number" id="rating" name="rating" min="1" max="5">
+            <label for="rating">Rating (1 to 5):</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
 
-        <label for="review_text">Review:</label>
-        <textarea id="review_text" name="review_text" rows="6" cols="40"></textarea>
+            <label for="review_text">Review:</label>
+            <textarea id="review_text" name="review_text" rows="6" cols="40"></textarea>
 
-        <button type="submit">Submit Review</button>
+            <button type="submit">Submit Review</button>
 
-    </form>
+        </form>
 
-    <p>
-        <a href="admin.php">Go to Admin Page</a>
-    </p>
+        <p>
+            <a href="admin.php">Go to Admin Page</a>
+        </p>
+    </div> 
+
+    <!-- Bootstrap JS: https://getbootstrap.com/docs/5.3/getting-started/download/ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>
