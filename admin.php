@@ -18,6 +18,12 @@ include "db.php";
     
     <div class="container mt-5">
         <h1 class="mb-4">ADMIN: Book reviews</h1>
+
+
+
+        <p>
+            <a href="index.php" class="btn btn-primary mb-3">Go to Main Page</a>
+        </p>
     </div>
 
 

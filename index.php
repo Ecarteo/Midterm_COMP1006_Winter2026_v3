@@ -21,26 +21,31 @@ include "db.php";
         <h1 class="mb-4">Submit a Book Review</h1>
 
         <form action="process.php" method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">Book Title:</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="mb-3">
+                <label for="author" class="form-label">Author:</label>
+                <input type="text" class="form-control" id="author" name="author" required>
+            </div>
+            <div class="mb-3">
+                <label for="rating" class="form-label">Rating (1 to 5):</label>
+                <input type="number" class="form-control" id="rating" name="rating" min="1" max="5" required>
+            </div>
+            <div class="mb-3">
+                <label for="review_text" class="form-label">Review:</label>
+                <textarea id="review_text" class="form-control" name="review_text" rows="6" cols="40"></textarea>
+            </div>
 
-            <label for="title">Book Title:</label>
-            <input type="text" id="title" name="title" required>
-
-            <label for="author">Author:</label>
-            <input type="text" id="author" name="author" required>
-
-            <label for="rating">Rating (1 to 5):</label>
-            <input type="number" id="rating" name="rating" min="1" max="5" required>
-
-            <label for="review_text">Review:</label>
-            <textarea id="review_text" name="review_text" rows="6" cols="40"></textarea>
-
-            <button type="submit">Submit Review</button>
+            <button type="submit" class="btn btn-primary">Submit Review</button>
 
         </form>
 
         <p>
-            <a href="admin.php">Go to Admin Page</a>
+            <a href="admin.php" class="btn btn-primary mb-3">Go to Admin Page</a>
         </p>
+        
     </div> 
 
     <!-- Bootstrap JS: https://getbootstrap.com/docs/5.3/getting-started/download/ -->
