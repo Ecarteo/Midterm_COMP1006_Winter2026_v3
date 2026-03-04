@@ -1,8 +1,6 @@
 <?php
 // Connect to the database
 include "db.php";
-
-
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +17,11 @@ include "db.php";
     <!-- Bootstrap elements were directly taken and used the same way as in my phase one course project. -->
     <div class="container mt-5">
         <h1 class="mb-4">Submit a Book Review</h1>
+
+        <?php if (isset($_GET["success"])): ?>
+            <!-- Show a success message after a review is submitted -->
+            <div class="alert alert-success">Your review was submitted successfully!</div>
+        <?php endif; ?>
 
         <form action="process.php" method="POST">
             <div class="mb-3">
@@ -39,14 +42,13 @@ include "db.php";
             </div>
 
             <button type="submit" class="btn btn-primary">Submit Review</button>
-
         </form>
 
-        <p>
-            <a href="admin.php" class="btn btn-primary mb-3">Go to Admin Page</a>
+        <p class="mt-3">
+            <a href="admin.php" class="btn btn-secondary">Go to Admin Page</a>
         </p>
-        
-    </div> 
+
+    </div>
 
     <!-- Bootstrap JS: https://getbootstrap.com/docs/5.3/getting-started/download/ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
